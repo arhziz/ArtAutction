@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ArtAutction.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ArtAutction.Controls"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:views="clr-namespace:ArtAutction.Views"
+    x:Name="RootPage">
+    <ContentPage.Content>
+
+
+        <Grid RowDefinitions="*,90" RowSpacing="0">
+            <!--#region Main Grid Region-->
+            <!--  Main Grid That contains all the contents with 3 rows  -->
+            <Grid BackgroundColor="{StaticResource MainBgColor}" RowDefinitions="50,*">
+                <!--#region Top Bar Region-->
+                <Grid ColumnDefinitions="2*,8*,2*">
+                    <ImageButton
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        Source="angle_left"
+                        Style="{StaticResource IconButtons}"
+                        VerticalOptions="Center" />
+                    <Label
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource TopLabel}"
+                        VerticalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span>Open Auction</Span>
+                                <Span Text="  " />
+                                <Span>•</Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <StackLayout
+                        Grid.Column="2"
+                        HorizontalOptions="Start"
+                        Orientation="Horizontal"
+                        Spacing="10"
+                        VerticalOptions="Center">
+                        <ImageButton Source="bookmark" Style="{StaticResource IconButtons}" />
+                        <ImageButton Source="option" Style="{StaticResource IconButtons}" />
+                    </StackLayout>
+                </Grid>
+                <!--#endregion-->
+
+                <!--#region ScrollView Region-->
+                <ScrollView Grid.Row="1" VerticalOptions="Fill">
+                    <Grid
+                        Margin="0"
+                        Padding="0"
+                        RowDefinitions="280,Auto,Auto,Auto"
+                        RowSpacing="0">
+
+                        <!--  The Main Image  -->
+                        <Image Aspect="AspectFill" Source="starry" />
+
+                        <!--  The Stack Layout that contains all the titles and other details  -->
+                        <StackLayout
+                            Grid.Row="1"
+                            Padding="20"
+                            Orientation="Vertical">
+                            <Label Style="{StaticResource TitleLabel}">
+                                The Starry Night
+                            </Label>
+                            <Label Style="{StaticResource PropertyLabel}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span>Oil on canvas</Span>
+                                        <Span Text="  " />
+                                        <Span>•</Span>
+                                        <Span Text="  " />
+                                        <Span>73 × 92cm</Span>
+                                        <Span Text="  " />
+                                        <Span>•</Span>
+                                        <Span Text="  " />
+                                        <Span>1889</Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+
+                        <!--  The Content Details in Text  -->
+                        <controls:LabelLength
+                            Grid.Row="2"
+                            Padding="20,0"
+                            MaxLength="144"
+                            ReadMore="Orange"
+                            Text="The Starry Night is an oil o canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the text"
+                            TxtAlignment="Start" />
+                        <!--  The Poster Details & Other Infos  -->
+                        <StackLayout
+                            Grid.Row="3"
+                            Padding="20"
+                            Spacing="20">
+                            <!--  First Brief Details  -->
+                            <controls:BriefDetails
+                                Name="Vencent Van Gogh"
+                                NameDetails="Dutch, 1853 — 1890"
+                                NameImage="vencent">
+                                <controls:BriefDetails.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ArtistDetailsPopup_Tapped" />
+                                </controls:BriefDetails.GestureRecognizers>
+                            </controls:BriefDetails>
+
+                            <!--  Second Brief Details  -->
+                            <controls:BriefDetails
+                                Name="Wikipedia"
+                                NameDetails="More info on wikipedia"
+                                NameImage="wikipedia">
+                                <controls:BriefDetails.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Wikipedia_Tapped" />
+                                </controls:BriefDetails.GestureRecognizers>
+                            </controls:BriefDetails>
+                        </StackLayout>
+                    </Grid>
+                </ScrollView>
+                <!--#endregion-->
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Make Bid Region-->
+
+            <pancake:PancakeView
+                Grid.Row="1"
+                Padding="0"
+                BackgroundColor="{StaticResource BidBgColor}"
+                Shadow="{pancake:ShadowMarkup Color=#000000,
+                                              Offset='5,5'}">
+                <pancake:PancakeView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BidPopup_Tapped" />
+                </pancake:PancakeView.GestureRecognizers>
+                <!--  Make Bid Grid  -->
+                <Grid Padding="20" ColumnDefinitions="7*,3*">
+                    <StackLayout Spacing="2" VerticalOptions="Center">
+                        <Label FontSize="16" TextColor="White">Auction of Art de Paris</Label>
+                        <Label FontSize="14" TextColor="{StaticResource DarkLightColor}">Start Bid at $4000</Label>
+                    </StackLayout>
+                    <Button
+                        Grid.Column="1"
+                        Clicked="MakeBidBtn_Clicked"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource MakeBidBtn}"
+                        Text="Make A Bid"
+                        VerticalOptions="Center" />
+                </Grid>
+            </pancake:PancakeView>
+            <!--#endregion-->
+            <!--#region Out of View Elements-->
+            <BoxView
+                x:Name="PageFader"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                BackgroundColor="Black"
+                IsVisible="False"
+                Opacity="0.5"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="PageFader_Tapped" />
+                </BoxView.GestureRecognizers>
+
+            </BoxView>
+
+            <views:ArtistDetailsPopup
+                x:Name="ArtistPop"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                TranslationY="{Binding Source={x:Reference RootPage}, Path=Height}" />
+
+
+            <views:BidPopup
+                x:Name="BidPop"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                TranslationY="{Binding Source={x:Reference RootPage}, Path=Height}" />
+
+            <!--#endregion-->
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

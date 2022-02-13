@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="ArtAutction.Controls.BriefDetails"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:circleimage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+    <Grid ColumnDefinitions="2*,9*,1*" ColumnSpacing="10">
+       
+        <circleimage:CircleImage
+            x:Name="BriefDeetsImage"
+            Aspect="AspectFill"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            Source="vencent"
+            VerticalOptions="Center"
+            WidthRequest="50" />
+        <StackLayout
+            Grid.Column="1"
+            Spacing="1"
+            VerticalOptions="Center">
+            <Label
+                x:Name="NameLabel"
+                FontSize="17"
+                TextColor="White">
+                Vencent Van Gogh
+            </Label>
+            <Label
+                x:Name="DetailsLabel"
+                FontSize="14"
+                TextColor="{StaticResource DarkLightColor}">
+                Dutch, 1853 — 1890
+            </Label>
+        </StackLayout>
+        <ImageButton
+            Grid.Column="2"
+            Padding="4"
+            BackgroundColor="Transparent"
+            HeightRequest="30"
+            HorizontalOptions="End"
+            Source="angle_right"
+            VerticalOptions="Center"
+            WidthRequest="30" />
+    </Grid>
+</ContentView>

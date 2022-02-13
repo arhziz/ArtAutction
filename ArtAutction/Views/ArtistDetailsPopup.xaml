@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="ArtAutction.Views.ArtistDetailsPopup"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:circleimage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:controls="clr-namespace:ArtAutction.Controls"
+    xmlns:vm="clr-namespace:ArtAutction.ViewModels">
+    <ContentView.BindingContext>
+        <vm:ArtViewModel />
+    </ContentView.BindingContext>
+
+    <Grid Padding="0">
+        <Grid RowDefinitions="50,50,Auto,Auto,Auto,90,Auto,*" RowSpacing="0">
+            <Grid.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Up" Swiped="ArtistDetailsUp_Swiped" />
+                <SwipeGestureRecognizer Direction="Down" Swiped="ArtistDetailsDown_Swiped" />
+            </Grid.GestureRecognizers>
+            <BoxView
+                x:Name="TheBoxView"
+                Grid.Row="1"
+                Grid.RowSpan="5"
+                BackgroundColor="{StaticResource BidBgColor}"
+                CornerRadius="20,20,0,0"
+                HeightRequest="200">
+                <BoxView.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Up" Swiped="ArtistDetailsUp_Swiped" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <circleimage:CircleImage
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Aspect="AspectFill"
+                BorderColor="Orange"
+                BorderThickness="2"
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                Source="vencent"
+                VerticalOptions="Center"
+                WidthRequest="80" />
+            <StackLayout Grid.Row="2" Spacing="0">
+                <Label HorizontalOptions="Center" Style="{StaticResource TitleLabel}">
+                    Vincent Van Gogh
+                </Label>
+                <Label
+                    x:Name="TestLabel"
+                    FontSize="14"
+                    HorizontalOptions="Center"
+                    TextColor="{StaticResource DarkLightColor}">
+                    Dutch, 1853 — 1890
+                </Label>
+            </StackLayout>
+
+            <controls:LabelLength
+                Grid.Row="3"
+                Padding="30,20"
+                MaxLength="100"
+                ReadMore="Orange"
+                Text="Was a Dutch Post-Impressionist painter who is among the most famous and influential"
+                TxtAlignment="Center" />
+            <BoxView
+                Grid.Row="4"
+                BackgroundColor="Gray"
+                HeightRequest="1"
+                Opacity="0.6" />
+            <Grid
+                Grid.Row="5"
+                Padding="0,10"
+                ColumnDefinitions="*,*,*,*">
+                <StackLayout
+                    Grid.Column="0"
+                    Padding="13"
+                    HorizontalOptions="Center"
+                    Spacing="1"
+                    VerticalOptions="Center">
+                    <Label Style="{StaticResource StatsLabel}">
+                        $7.5m
+                    </Label>
+                    <Label Style="{StaticResource StatsDeeLabel}">Record</Label>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="1"
+                    Padding="13"
+                    HorizontalOptions="Center"
+                    Spacing="1"
+                    VerticalOptions="Center">
+                    <Label Style="{StaticResource StatsLabel}">
+                        $3.5m
+                    </Label>
+                    <Label Style="{StaticResource StatsDeeLabel}">Average</Label>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="2"
+                    Padding="13"
+                    HorizontalOptions="Center"
+                    Spacing="1"
+                    VerticalOptions="Center">
+                    <Label Style="{StaticResource StatsLabel}">
+                        +598%
+                    </Label>
+                    <Label Style="{StaticResource StatsDeeLabel}">General</Label>
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Column="3"
+                    Padding="13"
+                    HorizontalOptions="Center"
+                    Spacing="1"
+                    VerticalOptions="Center">
+                    <Label Style="{StaticResource StatsLabel}">
+                        12
+                    </Label>
+                    <Label Style="{StaticResource StatsDeeLabel}">Items</Label>
+                </StackLayout>
+            </Grid>
+            <BoxView
+                Grid.Row="6"
+                BackgroundColor="Gray"
+                HeightRequest="1"
+                Opacity="0.6" />
+            <!--  Second Section of the popup  -->
+            <ScrollView Grid.Row="7" BackgroundColor="{StaticResource BidBgColor}">
+                <StackLayout Padding="10">
+                    <Label
+                        FontSize="16"
+                        Text="Other Van Gogh Works"
+                        TextColor="White" />
+                    <FlexLayout
+                        AlignItems="Start"
+                        BindableLayout.ItemsSource="{Binding TheArtworks}"
+                        Direction="Column"
+                        HeightRequest="880"
+                        JustifyContent="Start"
+                        Wrap="Wrap">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <controls:ArtsDetails
+                                    TheImage="{Binding Image}"
+                                    ThePrice="{Binding Price}"
+                                    TheTitle="{Binding Title}" />
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                        <!--<controls:ArtsDetails
+                            TheImage="tree"
+                            ThePrice="$950,000"
+                            TheTitle="Peach Tree in Blossom" />
+
+                        <controls:ArtsDetails
+                            TheImage="caffe"
+                            ThePrice="$1,920,00"
+                            TheTitle="Cafe Terace at Night" />
+
+                        <controls:ArtsDetails
+                            TheImage="cypresses"
+                            ThePrice="$1,920,00"
+                            TheTitle="Cypresses" />
+
+                        <controls:ArtsDetails
+                            TheImage="redvineyard"
+                            ThePrice="$1,920,00"
+                            TheTitle="The Red Vineyard" />
+
+                        <controls:ArtsDetails
+                            TheImage="awesomefield"
+                            ThePrice="$1,920,00"
+                            TheTitle="Awesome Fields" />
+
+                        <controls:ArtsDetails
+                            TheImage="landscape"
+                            ThePrice="$1,920,00"
+                            TheTitle="Great Landscape" />-->
+
+                    </FlexLayout>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </Grid>
+</ContentView>

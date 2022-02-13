@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="ArtAutction.Controls.LabelLength"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="this">
+
+    <Label
+        x:Name="lbl"
+        HorizontalTextAlignment="Start"
+        Style="{StaticResource DetailsLabel}"
+        Text="Hello Xamarin.Forms!">
+        <Label.GestureRecognizers>
+            <TapGestureRecognizer Tapped="Label_Tapped" />
+        </Label.GestureRecognizers>
+
+    </Label>
+
+</ContentView>

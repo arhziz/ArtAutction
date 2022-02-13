@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="ArtAutction.Controls.ArtsDetails"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <StackLayout Padding="10" WidthRequest="180">
+        <ImageButton
+            x:Name="ImageArt"
+            Aspect="AspectFill"
+            BackgroundColor="Transparent"
+            CornerRadius="10"
+            Source="tree" />
+        <Label
+            x:Name="TitleLabel"
+            FontSize="16"
+            Text="Peach Tree in Blossom"
+            TextColor="White" />
+        <Label
+            x:Name="PriceLabel"
+            FontSize="15"
+            Text="$950,000"
+            TextColor="{StaticResource DarkLightColor}" />
+    </StackLayout>
+</ContentView>
