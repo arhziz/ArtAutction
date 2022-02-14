@@ -6,6 +6,10 @@ A UI Challenge of an art auction ui found on dribble  [Alex Pesenka](https://dri
 
 This Ui challenge was inspired by [@kphillpotts](https://twitter.com/kphillpotts) works on UI Challenges.
 
+#Tools And Repos Used
+1. [Pancake View](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
+2. [pt.dave Font Helpers](https://github.com/ptdave20/com.ptdave.xamarin) for FontAwesome 
+
 # Contributions
 All the designs I implement are intended to be for learning more about techniques to create beautiful Xamarin.Forms interfaces. 
 
