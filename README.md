@@ -9,7 +9,7 @@ This Ui challenge was inspired by [@kphillpotts](https://twitter.com/kphillpotts
 #Tools And Repos Used
 1. [Pancake View](https://github.com/sthewissen/Xamarin.Forms.PancakeView).
 2. [pt.dave Font Helpers](https://github.com/ptdave20/com.ptdave.xamarin) for FontAwesome 
-
+3. [ImageCircle](https://github.com/arhziz/ImageCirclePlugin) From James Montemagno
 # Contributions
 All the designs I implement are intended to be for learning more about techniques to create beautiful Xamarin.Forms interfaces. 
 
