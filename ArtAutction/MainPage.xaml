@@ -4,23 +4,25 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:ArtAutction.Controls"
+    xmlns:dave="clr-namespace:com.ptdave.xamarin.FontHelpers;assembly=com.ptdave.xamarin"
     xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:views="clr-namespace:ArtAutction.Views"
     x:Name="RootPage">
     <ContentPage.Content>
-
-
         <Grid RowDefinitions="*,90" RowSpacing="0">
             <!--#region Main Grid Region-->
             <!--  Main Grid That contains all the contents with 3 rows  -->
             <Grid BackgroundColor="{StaticResource MainBgColor}" RowDefinitions="50,*">
                 <!--#region Top Bar Region-->
                 <Grid ColumnDefinitions="2*,8*,2*">
-                    <ImageButton
+                    <Button
                         Grid.Column="0"
+                        FontFamily="Material"
+                        FontSize="18"
                         HorizontalOptions="Center"
-                        Source="angle_left"
-                        Style="{StaticResource IconButtons}"
+                        Style="{StaticResource IconFontButtons}"
+                        Text="&#xe5e0;"
+                        TextColor="White"
                         VerticalOptions="Center" />
                     <Label
                         Grid.Column="1"
@@ -41,8 +43,18 @@
                         Orientation="Horizontal"
                         Spacing="10"
                         VerticalOptions="Center">
-                        <ImageButton Source="bookmark" Style="{StaticResource IconButtons}" />
-                        <ImageButton Source="option" Style="{StaticResource IconButtons}" />
+                        <Button
+                            FontFamily="Material"
+                            FontSize="22"
+                            Style="{StaticResource IconFontButtons}"
+                            Text="&#xe867;"
+                            TextColor="White" />
+                        <Button
+                            FontFamily="Material"
+                            FontSize="22"
+                            Style="{StaticResource IconFontButtons}"
+                            Text="&#xe5d4;"
+                            TextColor="White" />
                     </StackLayout>
                 </Grid>
                 <!--#endregion-->

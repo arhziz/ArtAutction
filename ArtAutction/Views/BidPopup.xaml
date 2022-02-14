@@ -62,7 +62,7 @@
                         VerticalOptions="Start">
                         <Image
                             HeightRequest="20"
-                            Source="https://pngpress.com/wp-content/uploads/2020/08/uploads_bitcoin_bitcoin_PNG48.png"
+                            Source="https://raw.githubusercontent.com/kphillpotts/ArtAuction/master/src/ArtAuction/ArtAuction.Android/Resources/drawable-hdpi/BCIcon.png"
                             VerticalOptions="Center"
                             WidthRequest="20" />
                         <Label
@@ -88,9 +88,8 @@
                         VerticalOptions="Start">
                         <circleimage:CircleImage
                             Aspect="AspectFill"
-                            BackgroundColor="White"
                             HeightRequest="20"
-                            Source="https://cdn4.iconfinder.com/data/icons/cryptocoins/227/ETH-alt-512.png"
+                            Source="https://raw.githubusercontent.com/kphillpotts/ArtAuction/master/src/ArtAuction/ArtAuction.Android/Resources/drawable-hdpi/ETHIcon.png"
                             VerticalOptions="Center"
                             WidthRequest="20" />
                         <Label
@@ -112,14 +111,14 @@
                     <StackLayout
                         HorizontalOptions="Start"
                         Orientation="Horizontal"
-                        Spacing="7"
+                        Spacing="12"
                         VerticalOptions="Start">
                         <circleimage:CircleImage
                             Aspect="AspectFill"
-                            HeightRequest="25"
-                            Source="https://icons-for-free.com/iconfiles/png/512/bxs+dollar+circle-1325051957480715228.png"
+                            HeightRequest="20"
+                            Source="https://raw.githubusercontent.com/kphillpotts/ArtAuction/master/src/ArtAuction/ArtAuction.Android/Resources/drawable-hdpi/USDIcon.png"
                             VerticalOptions="Center"
-                            WidthRequest="25" />
+                            WidthRequest="20" />
                         <Label
                             FontSize="17"
                             Text="USD"
@@ -156,11 +155,14 @@
                 Text="Make a Bid"
                 TextColor="White"
                 VerticalOptions="Center" />
-            <Image
+            <Label
                 Grid.Column="1"
+                FontFamily="Material"
+                FontSize="20"
                 HeightRequest="20"
                 HorizontalOptions="End"
-                Source="angle_right"
+                Text="&#xe5cf;"
+                TextColor="White"
                 VerticalOptions="Center"
                 WidthRequest="20" />
         </Grid>
@@ -191,11 +193,11 @@
                     </pancake:PancakeView.BackgroundGradientStops>
                     <StackLayout HorizontalOptions="Start">
                         <circleimage:CircleImage
-                            HeightRequest="30"
+                            HeightRequest="25"
                             HorizontalOptions="Start"
-                            Source="https://icons-for-free.com/iconfiles/png/512/bxs+dollar+circle-1325051957480715228.png"
+                            Source="https://raw.githubusercontent.com/kphillpotts/ArtAuction/master/src/ArtAuction/ArtAuction.Android/Resources/drawable-hdpi/USDIcon.png"
                             VerticalOptions="Center"
-                            WidthRequest="30" />
+                            WidthRequest="25" />
                         <Label
                             FontSize="15"
                             Text="Dollar"
@@ -220,11 +222,11 @@
                     </pancake:PancakeView.BackgroundGradientStops>
                     <StackLayout HorizontalOptions="Start">
                         <circleimage:CircleImage
-                            HeightRequest="30"
+                            HeightRequest="25"
                             HorizontalOptions="Start"
-                            Source="https://pngpress.com/wp-content/uploads/2020/08/uploads_bitcoin_bitcoin_PNG48.png"
+                            Source="https://raw.githubusercontent.com/kphillpotts/ArtAuction/master/src/ArtAuction/ArtAuction.Android/Resources/drawable-hdpi/BCIcon.png"
                             VerticalOptions="Center"
-                            WidthRequest="30" />
+                            WidthRequest="25" />
                         <Label
                             FontSize="15"
                             Text="Bitcoin"
@@ -249,11 +251,11 @@
                     </pancake:PancakeView.BackgroundGradientStops>
                     <StackLayout HorizontalOptions="Start">
                         <circleimage:CircleImage
-                            HeightRequest="30"
+                            HeightRequest="25"
                             HorizontalOptions="Start"
-                            Source="https://cdn4.iconfinder.com/data/icons/cryptocoins/227/ETH-alt-512.png"
+                            Source="https://raw.githubusercontent.com/kphillpotts/ArtAuction/master/src/ArtAuction/ArtAuction.Android/Resources/drawable-hdpi/ETHIcon.png"
                             VerticalOptions="Center"
-                            WidthRequest="30" />
+                            WidthRequest="25" />
                         <Label
                             FontSize="15"
                             Text="Etherium"

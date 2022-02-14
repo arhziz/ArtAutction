@@ -31,6 +31,12 @@
             <Setter Property="WidthRequest" Value="25" />
             <Setter Property="Padding" Value="2" />
         </Style>
+        <Style x:Key="IconFontButtons" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="HeightRequest" Value="25" />
+            <Setter Property="WidthRequest" Value="25" />
+            <Setter Property="Padding" Value="2" />
+        </Style>
         <Style x:Key="MakeBidBtn" TargetType="Button">
             <Setter Property="BackgroundColor" Value="{StaticResource ButtonColor}" />
             <Setter Property="CornerRadius" Value="20" />

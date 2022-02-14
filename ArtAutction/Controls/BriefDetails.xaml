@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:circleimage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
     <Grid ColumnDefinitions="2*,9*,1*" ColumnSpacing="10">
-       
+
         <circleimage:CircleImage
             x:Name="BriefDeetsImage"
             Aspect="AspectFill"
@@ -31,13 +31,16 @@
                 Dutch, 1853 — 1890
             </Label>
         </StackLayout>
-        <ImageButton
+        <Button
             Grid.Column="2"
             Padding="4"
             BackgroundColor="Transparent"
+            FontFamily="Material"
+            FontSize="22"
             HeightRequest="30"
             HorizontalOptions="End"
-            Source="angle_right"
+            Text="&#xe5e1;"
+            TextColor="White"
             VerticalOptions="Center"
             WidthRequest="30" />
     </Grid>
