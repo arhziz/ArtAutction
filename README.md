@@ -13,5 +13,5 @@ I welcome pull requests and suggestions to improve the solution. Please just rai
 
 Feel free to take this code and do what you will, but please make sure you acknowledge myself and also the original designer.
 
-# To Be Noted
-There are some refeerence issues left on the IOS version due to my lack IOS device, I will be pushing the updated version as soon as i get my hands on an IOS device. Thanks 
+# N.B
+There are some refeerence issues left on the IOS version due to my lack IOS device, I will be pushing the updated version as soon as i get my hands on one, and also uploading the workthrough video as well. Thanks 
